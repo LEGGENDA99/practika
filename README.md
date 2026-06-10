@@ -13,6 +13,7 @@
 
 ## Структура проекта
 
+```text
 ├── server.js
 └── public/
     ├── index.html
