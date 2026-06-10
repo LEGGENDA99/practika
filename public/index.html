@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузчик изображений</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Загрузчик изображений</h1>
+            <div id="network-status" class="status-indicator online">Онлайн</div>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <h2>Поиск картинок по ключевому слову</h2>
+                <div class="search-box">
+                    <input type="text" id="keyword-input" placeholder="Введите ключевое слово (dogs, cats, photos, anime)..." list="keywords-suggestions">
+                    <datalist id="keywords-suggestions"></datalist>
+                    <button id="search-btn">Найти</button>
+                </div>
+                <div id="error-message" class="error-container hidden"></div>
+            </section>
+
+            <section id="urls-section" class="urls-section hidden">
+                <h3>Доступные URL-адреса картинок</h3>
+                <ul id="urls-list"></ul>
+            </section>
+
+            <section class="storage-section">
+                <h2>Сохраненные картинки</h2>
+                <ul id="saved-list" class="saved-list"></ul>
+            </section>
+
+            <section id="viewer-section" class="viewer-section hidden">
+                <h2>Просмотр картинки</h2>
+                <div id="content-viewer" class="content-viewer"></div>
+            </section>
+        </main>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
